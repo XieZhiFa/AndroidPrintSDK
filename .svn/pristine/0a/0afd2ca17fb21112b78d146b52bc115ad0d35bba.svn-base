@@ -1,0 +1,96 @@
+﻿package com.android.print.demo.util;
+
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
+import com.android.print.demo.R;
+import com.android.print.sdk.PrinterConstants.Command;
+import com.android.print.sdk.PrinterInstance;
+
+public class PrintUtils {
+
+    public static void printText(Resources resources, PrinterInstance mPrinter) {
+        mPrinter.init();
+
+
+        mPrinter.printText(resources.getString(R.string.str_text));
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2);
+
+
+        mPrinter.setFont(0, 0, 0, 0);
+        mPrinter.setPrinter(Command.ALIGN, 0);
+        mPrinter.printText(resources.getString(R.string.str_text_left));
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2);// 换2行
+
+
+        mPrinter.setPrinter(Command.ALIGN, 1);
+        mPrinter.printText(resources.getString(R.string.str_text_center));
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2);// 换2行
+
+        mPrinter.setPrinter(Command.ALIGN, 2);
+        mPrinter.printText(resources.getString(R.string.str_text_right));
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 3); // 换3行
+
+        mPrinter.setPrinter(Command.ALIGN, 0);
+        mPrinter.setFont(0, 0, 1, 0);
+        mPrinter.printText(resources.getString(R.string.str_text_strong));
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2); // 换2行
+
+        mPrinter.setFont(0, 0, 0, 1);
+        mPrinter.sendByteData(new byte[]{(byte) 0x1C, (byte) 0x21, (byte) 0x80});
+        mPrinter.printText(resources.getString(R.string.str_text_underline));
+        mPrinter.sendByteData(new byte[]{(byte) 0x1C, (byte) 0x21, (byte) 0x00});
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2); // 换2行
+
+        mPrinter.setFont(0, 0, 0, 0);
+        mPrinter.printText(resources.getString(R.string.str_text_height));
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2);
+        for (int i = 0; i < 4; i++) {
+            mPrinter.setFont(i, i, 0, 0);
+            mPrinter.printText((i + 1) + resources.getString(R.string.times));
+
+        }
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 1);
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 3);
+
+        for (int i = 0; i < 4; i++) {
+            mPrinter.setFont(i, i, 0, 0);
+            mPrinter.printText(resources.getString(R.string.bigger) + (i + 1) + resources.getString(R.string.bigger1));
+            mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 3);
+        }
+
+        mPrinter.setFont(0, 0, 0, 0);
+        mPrinter.setPrinter(Command.ALIGN, 0);
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 3);
+
+    }
+
+
+
+
+
+    public static void printImage(Resources resources, PrinterInstance mPrinter) {
+        mPrinter.init();
+        mPrinter.setFont(0, 0, 0, 0);
+        mPrinter.setPrinter(Command.ALIGN, Command.ALIGN_LEFT);
+        mPrinter.printText(resources.getString(R.string.str_image));
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(resources, R.drawable.test);
+
+        //Bitmap bitmap=convertToBlackWhite(bmp);
+//
+//        if (isStylus) {
+//
+//            mPrinter.printImageStylus(bitmap1, 1);
+//
+//        } else {
+
+            mPrinter.printImage(bitmap1);
+
+//        }
+        mPrinter.setPrinter(Command.PRINT_AND_WAKE_PAPER_BY_LINE, 2); // 换2行
+    }
+
+
+}

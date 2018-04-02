@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+android:id="@+id/widget36"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+ android:stretchColumns="1,2"
+>
+
+ <TableRow>
+
+<TextView
+android:id="@+id/widget39"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="密码:"
+>
+</TextView>
+<EditText
+android:id="@+id/edtInput"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text=""
+android:textSize="18sp"
+>
+</EditText>
+
+</TableRow>
+</TableLayout>

@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">AndroidPrintSDK</string>
+
+
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">扫描设备中...</string>
+    <string name="select_device">请选择要连接的设备</string>
+    <string name="none_paired">没有匹配的设备</string>
+    <string name="has_paired">已配对</string>
+    <string name="not_paired">未配对</string>
+    <string name="rePaire_connect">重新配对并连接</string>
+    <string name="unpair">取消配对</string>
+    <string name="paire_connect">配对并连接</string>
+    <string name="connect_paired">连接</string>
+    <string name="select_options">选择操作</string>
+    <string name="none_found">没有找到设备</string>
+    <string name="no_bounded_device">未找到名称以 %s 开头的设备</string>
+    <string name="title_paired_devices">已配对的设备</string>
+    <string name="title_other_devices">其它可用设备</string>
+    <string name="button_scan">扫描新设备</string>
+
+    <!-- Options Menu -->
+    <string name="connect">打开连接</string>
+    <string name="disconnect">断开连接</string>
+
+
+
+    <!-- connect -->
+    <string name="no_conn_address">地址：未连接</string>
+    <string name="no_conn_name">名称：未连接</string>
+    <string name="str_address">地址：</string>
+    <string name="str_name">名称：</string>
+    <string name="str_message">提示：</string>
+    <string name="str_connlast">是否连接到上次设备？</string>
+    <string name="yesconn">确认连接</string>
+    <string name="str_resel">重新搜索</string>
+    <string name="str_wifi_now">当前连接的wifi是：</string>
+    <string name="str_wifi_no">尚未连接到任何wifi网络</string>
+    <string name="conn_failed">连接失败</string>
+    <string name="conn_closed">连接关闭</string>
+    <string name="conn_no">没有可连接的设备</string>
+
+
+
+    <string name="bt_not_enabled">蓝牙没有启动</string>
+    <string name="bt_has_on">蓝牙已打开</string>
+    <string name="bt_has_off">蓝牙已关闭</string>
+    <string name="bt_print_success">打印成功</string>
+    <string name="bt_print_failed">打印失败</string>
+    <string name="bt_connecting">正在连接..</string>
+    <string name="bt_connect_success">连接成功..</string>
+    <string name="bt_connect_failed">连接失败</string>
+    <string name="bt_connect_closed">连接已关闭</string>
+    <string name="title_connecting">正在连接...</string>
+    <string name="title_connected">已连接</string>
+    <string name="title_not_connected">未连接</string>
+
+
+    <string name="gotoSettings">设置</string>
+    <string name="password">请输入密码：</string>
+    <string name="cancel">取消</string>
+    <string name="button_back">返回</string>
+
+
+    <string name="print">打印</string>
+    <string name="str_show">演示：</string>
+    <string name="str_image">打印图片效果展示：</string>
+    <string name="str_text">打印文本效果展示：</string>
+    <string name="str_text_left">文字居左效果演示abc123：</string>
+    <string name="str_text_right">文字居右效果演示abc123：</string>
+    <string name="str_text_center">文字居中效果演示abc123：</string>
+    <string name="str_text_strong">文字加粗效果演示abc123：</string>
+    <string name="str_text_underline">文字下划线效果演示abc123：</string>
+    <string name="str_text_height">同行不同高效果演示：：</string>
+    <string name="times">倍</string>
+    <string name="bigger">放大</string>
+    <string name="bigger1">倍效果演示abc123</string>
+</resources>
