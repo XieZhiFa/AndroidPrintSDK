@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+#淆时忽略所以的警告
+-ignorewarning
+-dontoptimize
+-keepattributes InnerClasses
+-keepattributes EnclosingMethod
